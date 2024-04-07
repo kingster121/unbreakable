@@ -28,7 +28,8 @@ Prerequisites
 
 ### Install dependencies
 Libraries are installed from the Arduino IDE library manager. The libraries used in this project are:
+    ThingSpeak
         
 
 ## Usage
-Flash the esp32 with <INSERT FILE NAME> and clamp the current sensor around the live wire of the AC circuit you want to measure. Data from the esp32 will be streamed via UART at a baudrate of 115209.
+Flash the esp32 with kris_LED.ino and clamp the current sensor around the live wire of the AC circuit you want to measure. Data from the esp32 will be streamed via UART at a baudrate of 115209.
