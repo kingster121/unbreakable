@@ -25,7 +25,7 @@ Prerequisites:
 ### Installation
 Set up your IoT sensors:
 
-For the SEN0211, the data pin (blue) is connected to GPIO13. Vin of SEN0211 is connected parallel to Vin of our esp32 or 5V.
+For the SEN0211, the data pin (blue) and Vin (red) is connected to GPIO13 and 5V respectively.
     
     git clone https://github.com/Kris-Watson/HackOMania2024/
     
