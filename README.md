@@ -39,3 +39,7 @@ Wifi
         
 ## Usage
 Flash the esp32 with kris_LED.ino and clamp the current sensor around the live wire of the AC circuit you want to measure. Data from the esp32 will be streamed via UART at a baudrate of 115209.
+
+## Data Visualiztion:
+This implementation uses the ThingSpeak platform, which is based on MQTT backend, to publish data to a dashboard. It can be accessed here:
+https://thingspeak.com/channels/public?username=mwa0000033618310
