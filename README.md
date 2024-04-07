@@ -33,9 +33,8 @@ For the SEN0211, the data pin (blue) and Vin (red) is connected to GPIO13 and 5V
 ### Install dependencies
 Libraries are installed from the Arduino IDE library manager. The libraries used in this project are:
 
-ThingSpeak
-
-Wifi
+    ThingSpeak
+    Wifi
         
 ## Usage
 Flash the esp32 with kris_LED.ino and clamp the current sensor around the live wire of the AC circuit you want to measure. Data from the esp32 will be streamed via UART at a baudrate of 115209.
