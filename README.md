@@ -27,7 +27,7 @@ Set up your IoT sensors:
 
 For the SEN0211, the data pin (blue) and Vin (red) is connected to GPIO13 and 5V respectively.
     
-    git clone https://github.com/Kris-Watson/HackOMania2024/
+    git clone https://github.com/kingster121/unbreakable
     
 
 ### Install dependencies
