@@ -17,10 +17,10 @@ int i;
 CRGB leds[NUM_LEDS];
 TM1637Display display = TM1637Display(LCD_CLK, LCD_DIO);
 
-const char* ssid = "Jaxi2";   // your network SSID (name) 
-const char* password = "aa110011";   // your network password
-unsigned long myChannelNumber = 2499392;
-const char * myWriteAPIKey = "KWRMWEJCY6F1895J";
+const char* ssid = "***";   // your network SSID (name) 
+const char* password = "*****";   // your network password
+unsigned long myChannelNumber = *****;
+const char * myWriteAPIKey = "**********";
 
 // Timer for kWh and cost
 float kWh;
@@ -41,7 +41,7 @@ float analogToCurrent(int adcReading){
 
 float power(float current220V){
   float watts = current220V * 220;
-  float kWh = watts/1000;
+  float kWh = (watts/1000)/3600;
   return kWh;
 }
 
@@ -75,21 +75,10 @@ void setup() {
 }
 
 void loop() {
-  display.showNumberDec(analogRead(SENSOR));
-//  Serial.println(analogRead(SENSOR));
-//  FastLED.clear(); // Clear all LEDs before setting new ones
-//  for (i = 0; i < NUM_LEDS; i += 1) { // Loop through odd-indexed LEDs only
-//    FastLED.setBrightness(25);
-//    leds[i] = CRGB(255, 255, 255); // Set the color for odd-indexed LED
-////    delay(500);
-//    FastLED.show(); // Show the updated LEDs
-//  }
-//  FastLED.show();
-
   // Data from sensor
   float current220V = analogToCurrent(analogRead(SENSOR));
   Serial.println(current220V);
-
+  display.showNumberDec(round(current220V));
   ThingSpeak.writeField(myChannelNumber, 1, current220V, myWriteAPIKey);
 
   // Calculations
